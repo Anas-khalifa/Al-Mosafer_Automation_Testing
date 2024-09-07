@@ -5,8 +5,8 @@
     <classes>
       <class name="homePage.MyTestCases">
         <methods>
-          <include name="hotelSearchIsNotSelected"/>
           <include name="mySetUp"/>
+          <include name="pageLoadedSuccessfully"/>
         </methods>
       </class> <!-- homePage.MyTestCases -->
     </classes>
