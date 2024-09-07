@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Anas Khalifah\AppData\Local\Temp\testng-eclipse--1321665136\testng-customsuite.xml</span>
+                    <span>C:\Users\Anas Khalifah\AppData\Local\Temp\testng-eclipse-160248589\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods,   12 passed</span>
+                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="homePage.MyTestCases" class="method navigator-link" hash-for-method="pageLoadedSuccessfully">pageLoadedSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -149,11 +163,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="homePage.MyTestCases" class="method navigator-link" hash-for-method="pageLoadedSuccessfully">pageLoadedSuccessfully</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="homePage.MyTestCases" class="method navigator-link" hash-for-method="qitafLogoTest">qitafLogoTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -174,6 +183,57 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">homePage.MyTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="pageLoadedSuccessfully">
+                  </a> <!-- pageLoadedSuccessfully -->
+                  <span class="method-name">pageLoadedSuccessfully</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:819)
+	at org.testng.Assert.assertEquals(Assert.java:829)
+	at homePage.MyTestCases.pageLoadedSuccessfully(MyTestCases.java:129)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -245,13 +305,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="pageLoadedSuccessfully">
-                  </a> <!-- pageLoadedSuccessfully -->
-                  <span class="method-name">pageLoadedSuccessfully</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="qitafLogoTest">
                   </a> <!-- qitafLogoTest -->
                   <span class="method-name">qitafLogoTest</span>
@@ -269,7 +322,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Anas Khalifah\AppData\Local\Temp\testng-eclipse--1321665136\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Anas Khalifah\AppData\Local\Temp\testng-eclipse-160248589\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -322,51 +375,51 @@ data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'pageLoadedSuccessfully')
 data.setCell(0, 2, 'homePage.MyTestCases')
-data.setCell(0, 3, 14035);
+data.setCell(0, 3, 12588);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'selectNumberOfVisitors')
 data.setCell(1, 2, 'homePage.MyTestCases')
-data.setCell(1, 3, 5073);
+data.setCell(1, 3, 6001);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'pageLanguageTest')
 data.setCell(2, 2, 'homePage.MyTestCases')
-data.setCell(2, 3, 2030);
+data.setCell(2, 3, 2123);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'lowestPriceSortingTest')
 data.setCell(3, 2, 'homePage.MyTestCases')
-data.setCell(3, 3, 999);
+data.setCell(3, 3, 722);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'hotelsBtnAndSearch')
 data.setCell(4, 2, 'homePage.MyTestCases')
-data.setCell(4, 3, 601);
+data.setCell(4, 3, 682);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'defaultLanguageEnglishTest')
 data.setCell(5, 2, 'homePage.MyTestCases')
-data.setCell(5, 3, 37);
+data.setCell(5, 3, 148);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'defaultCurrencyTest')
 data.setCell(6, 2, 'homePage.MyTestCases')
-data.setCell(6, 3, 35);
+data.setCell(6, 3, 30);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'hotelSearchIsNotSelected')
+data.setCell(7, 1, 'contactNumberTest')
 data.setCell(7, 2, 'homePage.MyTestCases')
-data.setCell(7, 3, 33);
+data.setCell(7, 3, 26);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'qitafLogoTest')
 data.setCell(8, 2, 'homePage.MyTestCases')
-data.setCell(8, 3, 32);
+data.setCell(8, 3, 25);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'contactNumberTest')
+data.setCell(9, 1, 'hotelSearchIsNotSelected')
 data.setCell(9, 2, 'homePage.MyTestCases')
-data.setCell(9, 3, 27);
+data.setCell(9, 3, 22);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'flightReturnDate')
 data.setCell(10, 2, 'homePage.MyTestCases')
-data.setCell(10, 3, 26);
+data.setCell(10, 3, 22);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'flightDepartureDate')
 data.setCell(11, 2, 'homePage.MyTestCases')
-data.setCell(11, 3, 23);
+data.setCell(11, 3, 21);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -404,51 +457,53 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">defaultLanguageEnglishTest</span>
-                <span class="method-start">5457 ms</span>
+                <span class="method-start">20814 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">defaultCurrencyTest</span>
-                <span class="method-start">5498 ms</span>
+                <span class="method-start">20966 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">contactNumberTest</span>
-                <span class="method-start">5534 ms</span>
+                <span class="method-start">20997 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">qitafLogoTest</span>
-                <span class="method-start">5563 ms</span>
+                <span class="method-start">21024 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">hotelSearchIsNotSelected</span>
-                <span class="method-start">5597 ms</span>
+                <span class="method-start">21051 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">flightDepartureDate</span>
-                <span class="method-start">5631 ms</span>
+                <span class="method-start">21075 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">flightReturnDate</span>
-                <span class="method-start">5656 ms</span>
+                <span class="method-start">21097 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">pageLanguageTest</span>
-                <span class="method-start">5684 ms</span>
+                <span class="method-start">21120 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">hotelsBtnAndSearch</span>
-                <span class="method-start">7715 ms</span>
+                <span class="method-start">23246 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectNumberOfVisitors</span>
-                <span class="method-start">8318 ms</span>
+                <span class="method-start">23929 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">pageLoadedSuccessfully</span>
-                <span class="method-start">13392 ms</span>
+                <span class="method-start">29932 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">lowestPriceSortingTest</span>
-                <span class="method-start">27428 ms</span>
+                <span class="method-start">42523 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
